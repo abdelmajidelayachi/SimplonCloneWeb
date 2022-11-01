@@ -1,2 +1,5 @@
-package com.simplonclone.simploncloneweb.services;public class AdminService {
+package com.simplonclone.simploncloneweb.services;
+
+public class AdminService {
+
 }

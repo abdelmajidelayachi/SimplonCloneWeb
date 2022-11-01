@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 import java.sql.Timestamp;
 
+@SuppressWarnings("ALL")
 @Entity
 @Table(name = "admins", schema = "public", catalog = "simplon_web")
 public class AdminsEntity {
@@ -23,8 +24,9 @@ public class AdminsEntity {
     @Basic
     @Column(name = "password")
     private String password;
-    @Basic
-    @Column(name = "created_at")
+    @Basic(optional = false)
+    @Column(name = "created_at",insertable = false,updatable = false)
+    @Temporal(TemporalType.TIMESTAMP)
     private Timestamp createdAt;
 
     public int getIdAdmin() {
@@ -67,13 +69,10 @@ public class AdminsEntity {
         this.password = password;
     }
 
-    public Timestamp getCreatedAt() {
+    public Timestamp getCreatedAt(String s) {
         return createdAt;
     }
 
-    public void setCreatedAt(Timestamp createdAt) {
-        this.createdAt = createdAt;
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -102,4 +101,5 @@ public class AdminsEntity {
         result = 31 * result + (createdAt != null ? createdAt.hashCode() : 0);
         return result;
     }
+
 }

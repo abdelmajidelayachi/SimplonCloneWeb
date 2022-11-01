@@ -23,8 +23,9 @@ public class PromosEntity {
     @Basic
     @Column(name = "former_id")
     private Integer formerId;
-    @Basic
-    @Column(name = "created_at")
+    @Basic(optional = false)
+    @Column(name = "created_at",insertable = false,updatable = false)
+    @Temporal(TemporalType.TIMESTAMP)
     private Timestamp createdAt;
 
     public int getIdPromo() {

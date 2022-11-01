@@ -1,2 +1,16 @@
-package com.simplonclone.simploncloneweb.config;public class Config {
+package com.simplonclone.simploncloneweb.config;
+
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
+
+public class Config {
+    private static EntityManager entityManager = null;
+    static {
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("default");
+         entityManager = entityManagerFactory.createEntityManager();
+    }
+    public static EntityManager getEntityManager(){
+        return entityManager;
+    }
 }
