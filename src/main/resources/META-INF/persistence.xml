@@ -5,5 +5,17 @@
              version="3.0">
     <persistence-unit name="default">
 
+        <class>com.simplonclone.simploncloneweb.entity.AdminsEntity</class>
+        <class>com.simplonclone.simploncloneweb.entity.BriefsEntity</class>
+        <class>com.simplonclone.simploncloneweb.entity.FormersEntity</class>
+        <class>com.simplonclone.simploncloneweb.entity.LearnersEntity</class>
+        <class>com.simplonclone.simploncloneweb.entity.PromosEntity</class>
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5433/simplon_web"/>
+            <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
+            <property name="hibernate.connection.username" value="postgres"/>
+            <property name="hibernate.connection.password" value="admin"/>
+            <property name="hibernate.show_sql" value="true"/>
+        </properties>
     </persistence-unit>
 </persistence>

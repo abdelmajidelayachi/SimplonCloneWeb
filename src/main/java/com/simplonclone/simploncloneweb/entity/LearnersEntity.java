@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 import java.sql.Timestamp;
 
+@SuppressWarnings("ALL")
 @Entity
 @Table(name = "learners", schema = "public", catalog = "simplon_web")
 public class LearnersEntity {
@@ -26,8 +27,9 @@ public class LearnersEntity {
     @Basic
     @Column(name = "promo_id")
     private Integer promoId;
-    @Basic
-    @Column(name = "created_at")
+    @Basic(optional = false)
+    @Column(name = "created_at",insertable = false,updatable = false)
+    @Temporal(TemporalType.TIMESTAMP)
     private Timestamp createdAt;
 
     public int getIdLearner() {
