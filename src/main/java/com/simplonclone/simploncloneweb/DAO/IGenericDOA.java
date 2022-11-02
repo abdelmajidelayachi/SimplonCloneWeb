@@ -1,3 +1,6 @@
+/*
+* In the file we create an Interface for generic types
+* */
 package com.simplonclone.simploncloneweb.DAO;
 
 import java.util.List;
