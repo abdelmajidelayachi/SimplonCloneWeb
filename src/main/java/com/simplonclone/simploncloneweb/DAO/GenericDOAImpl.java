@@ -69,6 +69,7 @@ public class  GenericDOAImpl<T> implements IGenericDOA<T> {
     public List<T> getAll(Class<T> tClass,T object) {
         EntityManager entityManager = Config.getEntityManager();
         try{
+
             entityManager.getTransaction().begin();
             TypedQuery<T> query = entityManager.createQuery("SELECT a FROM "+tClass.getSimpleName()+" a",tClass);
             List<T> list = query.getResultList();
