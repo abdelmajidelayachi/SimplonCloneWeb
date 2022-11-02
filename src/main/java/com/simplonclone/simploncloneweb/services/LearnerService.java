@@ -1,5 +1,5 @@
 package com.simplonclone.simploncloneweb.services;
 
-public class AdminService {
+public class LearnerService {
 
 }
