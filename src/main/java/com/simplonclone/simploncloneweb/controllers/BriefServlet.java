@@ -1,4 +1,4 @@
-package com.simplonclone.simploncloneweb.servelts;
+package com.simplonclone.simploncloneweb.controllers;
 
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
