@@ -6,6 +6,7 @@ import jakarta.persistence.TypedQuery;
 
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class  GenericDOAImpl<T> implements IGenericDOA<T> {
 
@@ -83,7 +84,24 @@ public class  GenericDOAImpl<T> implements IGenericDOA<T> {
     }
 
     @Override
-    public List<T> query(String hsql, Map<String, Object> params) {
+    public List<T> query(Class<T> tClass, String jpql, Map<String, Object> params) {
+        EntityManager entityManager = Config.getEntityManager();
+        try{
+            entityManager.getTransaction().begin();
+            TypedQuery<T> query = entityManager.createQuery(jpql,tClass);
+
+            final int[] index = {params.size()};
+            params.forEach((key, value)->{
+                query.setParameter(index[0],value);
+                index[0] -=1;
+            });
+            List<T> list = query.getResultList();
+            entityManager.getTransaction().commit();
+            return list;
+
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
         return null;
     }
 }

@@ -13,5 +13,5 @@ public interface IGenericDOA<T> {
     public boolean deleteId(Class<T> tClass, int id);
 
     public List<T> getAll(Class<T> tClass,T object);
-    public List<T> query(String hsql, Map<String,Object> params);
+    public List<T> query(Class<T> tClass, String hsql, Map<String,Object> params);
 }
