@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+    <persistence-unit name="default">
+
+        <class>com.simploncloneweb.simplon_clone_web.entities.AdminsEntity</class>
+        <class>com.simploncloneweb.simplon_clone_web.entities.BriefsEntity</class>
+        <class>com.simploncloneweb.simplon_clone_web.entities.FormersEntity</class>
+        <class>com.simploncloneweb.simplon_clone_web.entities.LearnersEntity</class>
+        <class>com.simploncloneweb.simplon_clone_web.entities.PromosEntity</class>
+        <class>com.simploncloneweb.simplon_clone_web.entities.PromostolearnersEntity</class>
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5433/simplon_web"/>
+            <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
+            <property name="hibernate.connection.username" value="postgres"/>
+            <property name="hibernate.connection.password" value="admin"/>
+        </properties>
+    </persistence-unit>
+</persistence>
