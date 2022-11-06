@@ -23,8 +23,9 @@ public class LearnersEntity {
     @Basic
     @Column(name = "password")
     private String password;
-    @Basic
-    @Column(name = "created_at")
+    @Basic(optional = false)
+    @Column(name = "created_at",updatable = false,insertable = false)
+    @Temporal(TemporalType.TIMESTAMP)
     private Timestamp createdAt;
 
     public int getIdLearner() {

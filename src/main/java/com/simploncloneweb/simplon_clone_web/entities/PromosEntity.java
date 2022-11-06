@@ -20,8 +20,9 @@ public class PromosEntity {
     @Basic
     @Column(name = "campus")
     private String campus;
-    @Basic
-    @Column(name = "created_at")
+    @Basic(optional = false)
+    @Column(name = "created_at",updatable = false,insertable = false)
+    @Temporal(TemporalType.TIMESTAMP)
     private Timestamp createdAt;
     @Basic
     @Column(name = "former_id")

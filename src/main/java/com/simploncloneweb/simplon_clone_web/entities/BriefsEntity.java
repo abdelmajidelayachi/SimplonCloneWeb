@@ -33,8 +33,9 @@ public class BriefsEntity {
     @Basic
     @Column(name = "promo_id")
     private Integer promoId;
-    @Basic
-    @Column(name = "created_at")
+    @Basic(optional = false)
+    @Column(name = "created_at",updatable = false,insertable = false)
+    @Temporal(TemporalType.TIMESTAMP)
     private Timestamp createdAt;
 
     public int getIdBrief() {

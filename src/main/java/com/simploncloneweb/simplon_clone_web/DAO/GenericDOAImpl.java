@@ -56,7 +56,8 @@ public class  GenericDOAImpl<T> implements IGenericDOA<T> {
         try{
             entityManager.getTransaction().begin();
             T object = entityManager.find(tClass,id);
-            entityManager.remove(object);
+            T obj = entityManager.merge(object);
+            entityManager.remove(obj);
             entityManager.getTransaction().commit();
             return true;
 
