@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <link
         rel="stylesheet"
@@ -18,16 +19,48 @@
                     <div class="hidden md:block">
                         <div class="ml-10 flex items-baseline space-x-4">
                             <!-- Current: "bg-red-700 text-white", Default: "text-white hover:bg-red-500 hover:bg-opacity-75" -->
+                            <c:set var = "current" value ="${param.currentPage}"/>
+                            <c:choose>
+                                <c:when test="${current == 'former'}">
+                                    <a href="${pageContext.request.contextPath}/admin/formers"
+                                       class="bg-red-700 text-white px-3 py-2 rounded-md text-sm font-medium">Formers
+                                    </a>
 
+                                </c:when>
+                                <c:otherwise>
+                                    <a href="${pageContext.request.contextPath}/admin/formers"
+                                       class="text-white hover:bg-red-500 hover:bg-opacity-75 px-3 py-2 rounded-md text-sm font-medium">Formers
+                                    </a>
+                                </c:otherwise>
+                            </c:choose>
+                            <c:choose>
+                                <c:when test="${current == 'learner'}">
+                                    <a href="${pageContext.request.contextPath}/admin/learners"
+                                       class="bg-red-700 text-white px-3 py-2 rounded-md text-sm font-medium">Learner
+                                    </a>
 
-                            <a href="#"
-                               class="bg-red-700 text-white px-3 py-2 rounded-md text-sm font-medium">Formers</a>
+                                </c:when>
+                                <c:otherwise>
+                                    <a href="${pageContext.request.contextPath}/admin/learners"
+                                       class="text-white hover:bg-red-500 hover:bg-opacity-75 px-3 py-2 rounded-md text-sm font-medium">Learner
+                                    </a>
+                                </c:otherwise>
+                            </c:choose>
+                            <c:choose>
+                                <c:when test="${current == 'promo'}">
+                                    <a href="${pageContext.request.contextPath}/admin/promos"
+                                       class="bg-red-700 text-white px-3 py-2 rounded-md text-sm font-medium">Promos
+                                    </a>
 
-                            <a href="#"
-                               class="text-white hover:bg-red-500 hover:bg-opacity-75 px-3 py-2 rounded-md text-sm font-medium">Learners</a>
-                            <a href="#"
-                               class="text-white hover:bg-red-500 hover:bg-opacity-75 px-3 py-2 rounded-md text-sm font-medium">Promos</a>
-                            </div>
+                                </c:when>
+                                <c:otherwise>
+                                    <a href="${pageContext.request.contextPath}/admin/promos"
+                                       class="text-white hover:bg-red-500 hover:bg-opacity-75 px-3 py-2 rounded-md text-sm font-medium">Promos
+                                    </a>
+                                </c:otherwise>
+                            </c:choose>
+
+                         </div>
                     </div>
                 </div>
                 <div class="hidden md:block">

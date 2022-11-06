@@ -66,7 +66,7 @@ public class AdminServlet extends HttpServlet {
         List<PromosEntity> promos = new PromoService().getAll();
         request.setAttribute("formers",formers);
         request.setAttribute("promos",promos);
-        request.getRequestDispatcher("/admin/index.jsp").forward(request, response);
+        request.getRequestDispatcher("/admin/views/formers.jsp").forward(request, response);
     }
     private static void deleteFormer(HttpServletRequest request, HttpServletResponse response) throws IOException {
         System.out.println(request.getParameter("idFormer") );
@@ -115,16 +115,18 @@ public class AdminServlet extends HttpServlet {
         }
     }
 
-    private static void getLearners(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h1> Hello  this is Learners</h1>");
-        out.println("</body></html>");
+    private static void getLearners(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        List<FormersEntity> formers = new FormerService().getAll();
+        List<PromosEntity> promos = new PromoService().getAll();
+        request.setAttribute("formers",formers);
+        request.setAttribute("promos",promos);
+        request.getRequestDispatcher("/admin/views/learners.jsp").forward(request, response);
     }
-    private static void getPromos(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h1> Hello  this is promos</h1>");
-        out.println("</body></html>");
+    private static void getPromos(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        List<FormersEntity> formers = new FormerService().getAll();
+        List<PromosEntity> promos = new PromoService().getAll();
+        request.setAttribute("formers",formers);
+        request.setAttribute("promos",promos);
+        request.getRequestDispatcher("/admin/views/promos.jsp").forward(request, response);
     }
 }

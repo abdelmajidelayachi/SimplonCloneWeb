@@ -9,33 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa6ab473-c231-4296-8b7d-54966e6a8e04" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/util/Parser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/jakarta.servlet.jsp.jstl-2.0.0 .jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/jakarta.servlet.jsp.jstl-api-2.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/js/add.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/modals/add.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/modals/edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/tables/formers.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/component/impots.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/component/navBar.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/simploncloneweb/simplon_clone_web/controllers/AdminServletTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/simploncloneweb/simplon_clone_web/services/FormerServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/simplon_clone_web_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/simplon_clone_web_war_exploded.xml" afterDir="false" />
+    <list default="true" id="fa6ab473-c231-4296-8b7d-54966e6a8e04" name="Changes" comment="add crud of the former part in admin">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/views/learners.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/views/promos.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/DAO/GenericDOAImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/DAO/GenericDOAImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/controllers/AdminServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/controllers/AdminServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/entities/AdminsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/entities/AdminsEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/entities/BriefsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/entities/BriefsEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/entities/FormersEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/entities/FormersEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/entities/LearnersEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/entities/LearnersEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/entities/PromosEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/entities/PromosEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/controllers/AuthServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/controllers/AuthServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/views/formers.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/component/navBar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/component/navBar.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +81,7 @@
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "C:/Users/YC/OneDrive/Documents/java/briefs/SimplonCloneWeb/src/main/webapp/admin/modals",
+    "last_opened_file_path": "C:/Users/YC/OneDrive/Documents/java/briefs/SimplonCloneWeb/src/main/webapp/admin/views",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -119,14 +100,17 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\YC\OneDrive\Documents\java\briefs\SimplonCloneWeb\src\main\webapp\admin\views" />
       <recent name="C:\Users\YC\OneDrive\Documents\java\briefs\SimplonCloneWeb\src\main\webapp\admin\modals" />
       <recent name="C:\Users\YC\OneDrive\Documents\java\briefs\SimplonCloneWeb\src\main\webapp\admin\js" />
       <recent name="C:\Users\YC\OneDrive\Documents\java\briefs\SimplonCloneWeb\src\main\webapp\WEB-INF\lib" />
       <recent name="C:\Users\YC\OneDrive\Documents\java\briefs\SimplonCloneWeb\src\main\webapp" />
-      <recent name="C:\Users\YC\OneDrive\Documents\java\SimplonCloneWeb\UML" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\YC\OneDrive\Documents\java\briefs\SimplonCloneWeb\src\main\webapp\admin\views" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.simploncloneweb.simplon_clone_web.services" />
@@ -413,8 +397,16 @@
       <workItem from="1667490253805" duration="27763000" />
       <workItem from="1667731563173" duration="6514000" />
       <workItem from="1667744561256" duration="3006000" />
-      <workItem from="1667747659619" duration="10999000" />
+      <workItem from="1667747659619" duration="12854000" />
     </task>
+    <task id="LOCAL-00001" summary="add crud of the former part in admin">
+      <created>1667759504037</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1667759504038</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -430,6 +422,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add crud of the former part in admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="add crud of the former part in admin" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
