@@ -12,7 +12,7 @@ import java.io.IOException;
 public class AuthServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        request.getRequestDispatcher("../webapp/index.jsp").forward(request,response);
+//        request.getRequestDispatcher("../webapp/formers.jsp").forward(request,response);
     }
 
     @Override
