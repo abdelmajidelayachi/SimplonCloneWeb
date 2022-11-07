@@ -9,13 +9,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa6ab473-c231-4296-8b7d-54966e6a8e04" name="Changes" comment="add crud of the former part in admin">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/views/learners.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/views/promos.jsp" afterDir="false" />
+    <list default="true" id="fa6ab473-c231-4296-8b7d-54966e6a8e04" name="Changes" comment="add : route of the nav">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/tables/learners.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/tables/promos.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/simploncloneweb/simplon_clone_web/services/LearnerServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/DAO/GenericDOAImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/DAO/GenericDOAImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/controllers/AdminServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/controllers/AdminServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/controllers/AuthServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/controllers/AuthServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/views/formers.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/services/PromoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/services/PromoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/modals/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/modals/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/modals/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/modals/edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/tables/formers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/tables/formers.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/views/formers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/views/formers.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/views/learners.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/views/learners.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/views/promos.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/views/promos.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/component/navBar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/component/navBar.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +88,7 @@
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "C:/Users/YC/OneDrive/Documents/java/briefs/SimplonCloneWeb/src/main/webapp/admin/views",
+    "last_opened_file_path": "C:/Users/YC/OneDrive/Documents/java/briefs/SimplonCloneWeb/src/main/webapp/admin/tables",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -100,11 +107,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\YC\OneDrive\Documents\java\briefs\SimplonCloneWeb\src\main\webapp\admin\tables" />
       <recent name="C:\Users\YC\OneDrive\Documents\java\briefs\SimplonCloneWeb\src\main\webapp\admin\views" />
       <recent name="C:\Users\YC\OneDrive\Documents\java\briefs\SimplonCloneWeb\src\main\webapp\admin\modals" />
       <recent name="C:\Users\YC\OneDrive\Documents\java\briefs\SimplonCloneWeb\src\main\webapp\admin\js" />
       <recent name="C:\Users\YC\OneDrive\Documents\java\briefs\SimplonCloneWeb\src\main\webapp\WEB-INF\lib" />
-      <recent name="C:\Users\YC\OneDrive\Documents\java\briefs\SimplonCloneWeb\src\main\webapp" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -153,22 +160,6 @@
       <option name="OPTIONS" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="AdminServletTest.testIsvalid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="simplon_clone_web" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.simploncloneweb.simplon_clone_web.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.simploncloneweb.simplon_clone_web.controllers" />
-      <option name="MAIN_CLASS_NAME" value="com.simploncloneweb.simplon_clone_web.controllers.AdminServletTest" />
-      <option name="METHOD_NAME" value="testIsvalid" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="FormerServiceTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="simplon_clone_web" />
       <extension name="coverage">
@@ -196,6 +187,22 @@
       <option name="PACKAGE_NAME" value="com.simploncloneweb.simplon_clone_web.services" />
       <option name="MAIN_CLASS_NAME" value="com.simploncloneweb.simplon_clone_web.services.FormerServiceTest" />
       <option name="METHOD_NAME" value="edit" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LearnerServiceTest.getAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="simplon_clone_web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.simploncloneweb.simplon_clone_web.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.simploncloneweb.simplon_clone_web.services" />
+      <option name="MAIN_CLASS_NAME" value="com.simploncloneweb.simplon_clone_web.services.LearnerServiceTest" />
+      <option name="METHOD_NAME" value="getAll" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -363,18 +370,18 @@
     <list>
       <item itemvalue="Application.Test" />
       <item itemvalue="JUnit.FormerServiceTest.edit" />
+      <item itemvalue="JUnit.LearnerServiceTest.getAll" />
       <item itemvalue="JUnit.FormerServiceTest.add" />
-      <item itemvalue="JUnit.AdminServletTest.testIsvalid" />
       <item itemvalue="Node.js.add.js" />
       <item itemvalue="Tomcat Server.Tomcat 10.0.27" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LearnerServiceTest.getAll" />
         <item itemvalue="JUnit.FormerServiceTest.edit" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Node.js.add.js" />
         <item itemvalue="JUnit.FormerServiceTest.add" />
-        <item itemvalue="JUnit.AdminServletTest.testIsvalid" />
       </list>
     </recent_temporary>
   </component>
@@ -397,7 +404,7 @@
       <workItem from="1667490253805" duration="27763000" />
       <workItem from="1667731563173" duration="6514000" />
       <workItem from="1667744561256" duration="3006000" />
-      <workItem from="1667747659619" duration="12854000" />
+      <workItem from="1667747659619" duration="26541000" />
     </task>
     <task id="LOCAL-00001" summary="add crud of the former part in admin">
       <created>1667759504037</created>
@@ -406,7 +413,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667759504038</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add : route of the nav">
+      <created>1667761381698</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1667761381698</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -425,7 +439,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add crud of the former part in admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="add crud of the former part in admin" />
+    <MESSAGE value="add : route of the nav" />
+    <option name="LAST_COMMIT_MESSAGE" value="add : route of the nav" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

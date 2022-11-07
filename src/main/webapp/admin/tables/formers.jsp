@@ -1,17 +1,16 @@
 <%@ page import="java.util.List" %>
 <%@ page import="com.simploncloneweb.simplon_clone_web.entities.FormersEntity" %>
-<%@ page import="java.text.SimpleDateFormat" %>
 <header class="bg-white shadow-sm">
   <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
     <h1 class="text-lg leading-6 font-semibold text-gray-900">Formers</h1>
   </div>
 </header>
 <main>
-  <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto sm:px-2 lg:px-8">
     <!-- Replace with your content -->
-    <div class="px-4 py-4 sm:px-0">
+    <div class="md:px-4 px-2 py-4 sm:px-0">
       <!-- component -->
-      <div class="bg-white p-8 rounded-md w-full">
+      <div class="bg-white md:p-8 p-4 rounded-md w-full">
         <div class=" flex items-center w-full pb-6">
 
           <div class="flex items-center w-full  justify-between">
@@ -133,6 +132,7 @@
                   </td>
                   <td>
                     <jsp:include page="../modals/edit.jsp">
+                      <jsp:param name="target" value="former"/>
                       <jsp:param name="id" value="<%=former.getIdFormer()%>"/>
                       <jsp:param name="firstname" value="<%=former.getFirstName()%>"/>
                       <jsp:param name="lastname" value="<%=former.getLastName()%>"/>

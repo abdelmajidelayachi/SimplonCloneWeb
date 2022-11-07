@@ -8,7 +8,9 @@
     <jsp:param name="currentPage" value="former"/>
 </jsp:include>
 <jsp:include page="../tables/formers.jsp"/>
-<jsp:include page="../modals/add.jsp"/>
+<jsp:include page="../modals/add.jsp">
+    <jsp:param name="target" value="former"/>
+</jsp:include>
 </body>
-<script type="text/javascript" src="../js/add.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/admin/js/add.js"></script>
 </html>

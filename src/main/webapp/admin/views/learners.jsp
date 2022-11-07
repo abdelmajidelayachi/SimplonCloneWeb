@@ -7,8 +7,10 @@
 <jsp:include page="../../component/navBar.jsp">
     <jsp:param name="currentPage" value="learner"/>
 </jsp:include>
-<jsp:include page="../tables/formers.jsp"/>
-<jsp:include page="../modals/add.jsp"/>
+<jsp:include page="../tables/learners.jsp"/>
+<jsp:include page="../modals/add.jsp">
+    <jsp:param name="target" value="learner"/>
+</jsp:include>
 </body>
-<script type="text/javascript" src="../js/add.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/admin/js/add.js"></script>
 </html>

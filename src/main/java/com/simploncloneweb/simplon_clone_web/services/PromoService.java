@@ -21,7 +21,9 @@ public class PromoService {
         newPromo.setPromoName(promoName);
         newPromo.setCampus(campus);
         newPromo.setDescription(description);
-        newPromo.setFormerId(formerId);
+        if (formerId != -1) {
+            newPromo.setFormerId(formerId);
+        }
         GenericDOAImpl<PromosEntity> genericDOA = new GenericDOAImpl<>();
         return genericDOA.save(newPromo);
     }
@@ -32,7 +34,9 @@ public class PromoService {
         promo.setPromoName(promoName);
         promo.setCampus(campus);
         promo.setDescription(description);
-        promo.setFormerId(formerId);
+        if (formerId != -1) {
+            promo.setFormerId(formerId);
+        }
         GenericDOAImpl<PromosEntity> genericDOA = new GenericDOAImpl<>();
         return genericDOA.update(promo);
     }
