@@ -1,6 +1,7 @@
 <%@ page import="java.util.List" %>
 <%@ page import="com.simploncloneweb.simplon_clone_web.entities.LearnersEntity" %>
 <%@ page import="com.simploncloneweb.simplon_clone_web.entities.PromosEntity" %>
+<%@ page import="com.simploncloneweb.simplon_clone_web.entities.FormersEntity" %>
 <header class="bg-white shadow-sm">
   <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
     <h1 class="text-lg leading-6 font-semibold text-gray-900">Learners</h1>
@@ -63,6 +64,7 @@
                 </thead>
                 <tbody>
                 <% List<PromosEntity> promos = (List<PromosEntity>) request.getAttribute("promos");
+                List<FormersEntity> formers = (List<FormersEntity>) request.getAttribute("formers");
                   if (promos != null) {
 
                   for (PromosEntity promo: promos) { %>
@@ -92,10 +94,56 @@
                       <%=promo.getCampus()%>
                     </p>
                   </td>
+                  <%
+                    FormersEntity formerPromo = null;
+                    if (promo.getFormerId() != null) {
+                      for (FormersEntity former: formers) {
+                          if (promo.getFormerId()==former.getIdFormer()){
+                            formerPromo = former;
+                          }
+                        }
+                    }%>
                   <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                    <p class="text-gray-900 whitespace-no-wrap">
-                      <%=promo.getFormerId()%>
+                    <p id="display-<%=promo.getIdPromo()%>" class="text-gray-900 whitespace-no-wrap">
+                      <%
+                        if (formerPromo != null) {
+                      %>
+                      <%=formerPromo.getFirstName() + " "+ formerPromo.getLastName()%>
+                      <%}else {
+                      %>
+                      <%="Not Assigned"%>
+                      <%}%>
+
                     </p>
+                    <div id="assign-<%=promo.getIdPromo()%>" class="hidden col-span-6 sm:col-span-3">
+                      <form action="/admin/promo/assign" method="post">
+                        <input type="hidden" name="id" value="<%=promo.getIdPromo()%>">
+                        <label for="promoId" class="block text-sm font-medium text-gray-700">
+                          <select name="formerId" id="promoId" autocomplete="family-name"
+                                  class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            <%
+                              for (FormersEntity former : formers) {
+                                boolean isAssigned = false;
+                                for (PromosEntity promo1: promos) {
+                                  if (promo.getFormerId() == null || promo1.getFormerId() == former.getIdFormer()) {
+                                    isAssigned = true;
+                                  }
+                                }
+                                if (!isAssigned){
+                            %>
+                            <option value="<%=former.getIdFormer()%>"><%=former.getFirstName() + " "+ former.getLastName()%></option>
+                            <%
+                                }
+                              }
+                            %>
+                          </select>
+                        </label>
+                        <button type="submit"
+                                class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm">
+                          Assign
+                        </button>
+                      </form>
+                    </div>
                   </td>
                   <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                     <p class="text-gray-900 whitespace-no-wrap">
@@ -106,6 +154,16 @@
                   </td>
                   <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                     <%--open edit promo form--%>
+                      <button type="button" onclick="assignForm(<%=promo.getIdPromo()%>)"
+                              class="w-5 mr-3  transform hover:text-secondary-green hover:scale-110"
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                          <title>Assign former to promo</title>
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                          <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"></path>
+                          <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
+                        </svg>
+                      </button>
                     <button type="button" onclick="editFormOpen(<%=promo.getIdPromo()%>)"
                     class="w-5 mr-3  transform hover:text-secondary-green hover:scale-110"
                     >

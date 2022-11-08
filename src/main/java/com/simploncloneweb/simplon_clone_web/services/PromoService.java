@@ -31,9 +31,15 @@ public class PromoService {
     public boolean edit(String promoName, String campus, String description, int formerId,int id){
         PromosEntity promo = new PromosEntity();
         promo.setIdPromo(id);
-        promo.setPromoName(promoName);
-        promo.setCampus(campus);
-        promo.setDescription(description);
+        if (promoName != null) {
+            promo.setPromoName(promoName);
+        }
+        if (campus != null) {
+            promo.setCampus(campus);
+        }
+        if (description != null){
+            promo.setDescription(description);
+        }
         if (formerId != -1) {
             promo.setFormerId(formerId);
         }
