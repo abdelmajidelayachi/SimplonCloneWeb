@@ -15,3 +15,15 @@ function cancelFormEdit(id){
     let formEdit = document.getElementById(`modal-${id}`)
     formEdit.classList.add('hidden');
 }
+function assignForm(id){
+    console.log(id)
+    let display = document.getElementById(`display-${id}`)
+    let assign = document.getElementById(`assign-${id}`)
+    if (display.classList.contains("hidden")){
+        display.classList.remove('hidden');
+        assign.classList.add('hidden');
+    }else{
+        display.classList.add('hidden');
+        assign.classList.remove('hidden');
+    }
+}

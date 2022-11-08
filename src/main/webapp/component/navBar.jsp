@@ -80,7 +80,7 @@
                         <!-- Profile dropdown -->
                         <div class="ml-3 relative">
                             <div>
-                                <button type="button"
+                                <button type="button" onclick="dropdown()"
                                         class="max-w-xs bg-red-600 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-red-600 focus:ring-white"
                                         id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                                     <span class="sr-only">Open user menu</span>
@@ -100,7 +100,7 @@
                                 From: "transform opacity-100 scale-100"
                                 To: "transform opacity-0 scale-95"
                             -->
-                            <div class="hidden origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                            <div id="profile-menu" class="hidden origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
                                  role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button"
                                  tabindex="-1">
                                 <!-- Active: "bg-gray-100", Not Active: "" -->
@@ -231,14 +231,22 @@
     </nav>
     <script type="text/javascript">
         const menu = document.getElementById('navbar-toggle-menu');
+        const profile = document.getElementById('profile-menu');
         function showMenu(){
             if(menu.classList.contains('hidden')){
                 menu.classList.remove('hidden');
             }else{
                 menu.classList.add('hidden');
-
+            }
+        }
+        function dropdown(){
+            if(profile.classList.contains('hidden')){
+                profile.classList.remove('hidden');
+            }else{
+                profile.classList.add('hidden');
             }
         }
     </script>
+
 
 
