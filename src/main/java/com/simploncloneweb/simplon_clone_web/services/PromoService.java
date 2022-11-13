@@ -1,8 +1,10 @@
 package com.simploncloneweb.simplon_clone_web.services;
 
 import com.simploncloneweb.simplon_clone_web.DAO.GenericDOAImpl;
+import com.simploncloneweb.simplon_clone_web.entities.FormersEntity;
 import com.simploncloneweb.simplon_clone_web.entities.PromosEntity;
 
+import java.util.HashMap;
 import java.util.List;
 
 public class PromoService {
@@ -14,6 +16,14 @@ public class PromoService {
     public PromosEntity getById(int id){
         GenericDOAImpl<PromosEntity> genericDOA = new GenericDOAImpl<>();
         return genericDOA.get(PromosEntity.class,id);
+    }
+    public PromosEntity getByFormerId(int id){
+        GenericDOAImpl<PromosEntity> promoEntityGenericDOA = new GenericDOAImpl<>();
+        String jpaQuery = "SELECT a FROM PromosEntity a WHERE a.formerId = ?1" ;
+        HashMap<String , Object> params = new HashMap<>();
+        params.put("formerId",id);
+        List<PromosEntity> promo  = promoEntityGenericDOA.query(PromosEntity.class, jpaQuery, params);
+        return promo != null ? promo.get(0): null;
     }
 
     public boolean add(String promoName, String campus, String description, int formerId){

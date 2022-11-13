@@ -73,9 +73,8 @@ public class  GenericDOAImpl<T> implements IGenericDOA<T> {
         try{
             //entityManager.getTransaction().begin();
             TypedQuery<T> query = entityManager.createQuery("SELECT a FROM "+tClass.getSimpleName()+" a",tClass);
-            List<T> list = query.getResultList();
             //entityManager.getTransaction().commit();
-            return list;
+            return query.getResultList();
 
         }catch (Exception e){
             System.out.println(e.getMessage());
