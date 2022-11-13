@@ -9,8 +9,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa6ab473-c231-4296-8b7d-54966e6a8e04" name="Changes" comment="add : assign former to promo">
+    <list default="true" id="fa6ab473-c231-4296-8b7d-54966e6a8e04" name="Changes" comment="finish admin">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/auth/adminAuth.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/auth/formerAuth.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/auth/learnerAuth.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/component/nav.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/former/tables/learners.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/former/views/learners.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/simplon clone class diagram .pdf" beforeDir="false" afterPath="$PROJECT_DIR$/UML/simplon clone class diagram .pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/simplon clone use case.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/UML/simplon clone use case.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/DAO/GenericDOAImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/DAO/GenericDOAImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/controllers/AuthServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/controllers/AuthServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/controllers/BriefServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/controllers/FormerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/controllers/FormerServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/controllers/PromoServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/entities/LearnersEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/entities/LearnersEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/entities/PromosEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/entities/PromosEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/services/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/services/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/services/LearnerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/services/LearnerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/services/PromoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simploncloneweb/simplon_clone_web/services/PromoService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +93,7 @@
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "C:/Users/YC/OneDrive/Documents/java/briefs/SimplonCloneWeb/src/main/webapp/admin/modals",
+    "last_opened_file_path": "C:/Users/YC/OneDrive/Documents/java/briefs/SimplonCloneWeb/src/main/webapp/former/tables",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -94,11 +112,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\YC\OneDrive\Documents\java\briefs\SimplonCloneWeb\src\main\webapp\former\tables" />
+      <recent name="C:\Users\YC\OneDrive\Documents\java\briefs\SimplonCloneWeb\src\main\webapp\auth" />
+      <recent name="C:\Users\YC\OneDrive\Documents\java\briefs\SimplonCloneWeb\UML" />
       <recent name="C:\Users\YC\OneDrive\Documents\java\briefs\SimplonCloneWeb\src\main\webapp\admin\modals" />
       <recent name="C:\Users\YC\OneDrive\Documents\java\briefs\SimplonCloneWeb\src\main\webapp\component" />
-      <recent name="C:\Users\YC\OneDrive\Documents\java\briefs\SimplonCloneWeb\src\main\webapp\admin\tables" />
-      <recent name="C:\Users\YC\OneDrive\Documents\java\briefs\SimplonCloneWeb\src\main\webapp\admin\views" />
-      <recent name="C:\Users\YC\OneDrive\Documents\java\briefs\SimplonCloneWeb\src\main\webapp\admin\js" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -119,7 +137,7 @@
       <recent name="com.simploncloneweb.simplon_clone_web.controllers" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 10.0.27">
+  <component name="RunManager" selected="Application.Test">
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Test" />
       <module name="simplon_clone_web" />
@@ -391,7 +409,7 @@
       <workItem from="1667490253805" duration="27763000" />
       <workItem from="1667731563173" duration="6514000" />
       <workItem from="1667744561256" duration="3006000" />
-      <workItem from="1667747659619" duration="49933000" />
+      <workItem from="1667747659619" duration="95229000" />
     </task>
     <task id="LOCAL-00001" summary="add crud of the former part in admin">
       <created>1667759504037</created>
@@ -421,7 +439,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667867340805</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="finish admin">
+      <created>1667912988521</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1667912988521</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,17 +468,7 @@
     <MESSAGE value="add : route of the nav" />
     <MESSAGE value="finish : basic fature of admin" />
     <MESSAGE value="add : assign former to promo" />
-    <option name="LAST_COMMIT_MESSAGE" value="add : assign former to promo" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Test.java</url>
-          <line>10</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="finish admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish admin" />
   </component>
 </project>

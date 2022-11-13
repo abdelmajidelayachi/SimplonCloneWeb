@@ -1,8 +1,11 @@
 package com.simploncloneweb.simplon_clone_web.entities;
 
 import jakarta.persistence.*;
+import org.postgresql.core.CachedQuery;
 
 import java.sql.Timestamp;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "learners", schema = "public", catalog = "simplon_web")
@@ -76,7 +79,16 @@ public class LearnersEntity {
         this.createdAt = createdAt;
     }
 
+    @ManyToMany(cascade = {CascadeType.ALL}, fetch = FetchType.LAZY)
+    @JoinTable(
+            name = "promostolearners",
+            joinColumns = @JoinColumn(name = "promo_id"),
+            inverseJoinColumns = @JoinColumn(name = "learner_id"))
+    private Set<PromosEntity> promos;
+
+
     @Override
+
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;

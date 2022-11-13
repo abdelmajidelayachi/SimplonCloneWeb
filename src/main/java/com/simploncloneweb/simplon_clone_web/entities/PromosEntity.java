@@ -3,6 +3,10 @@ package com.simploncloneweb.simplon_clone_web.entities;
 import jakarta.persistence.*;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "promos", schema = "public", catalog = "simplon_web")
@@ -75,6 +79,9 @@ public class PromosEntity {
     public void setFormerId(Integer formerId) {
         this.formerId = formerId;
     }
+
+    @ManyToMany(mappedBy = "promos",fetch = FetchType.LAZY)
+    private Set<LearnersEntity> learners = new HashSet<>();
 
     @Override
     public boolean equals(Object o) {
